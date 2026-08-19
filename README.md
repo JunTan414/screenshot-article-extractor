@@ -41,9 +41,42 @@ cp -r screenshot-article-extractor/skills/screenshot-article-extractor ~/.workbu
 
 On Windows the user-level skills directory is `C:\Users\<you>\.workbuddy\skills\`.
 
+### Codex
+
+Two options — the folder-copy works on every version, the one-liner needs Codex CLI v0.122+:
+
+```text
+# Option A (any version): copy into the personal skills dir
+mkdir -p ~/.agents/skills
+cp -r skills/screenshot-article-extractor ~/.agents/skills/
+
+# Option B (CLI v0.122+): install via plugin marketplace
+codex plugin marketplace add JunTan414/screenshot-article-extractor
+```
+
+Verify with `/skills` in a Codex session. SKILL.md uses the shared Agent Skills format, so no conversion is needed.
+
 ### Other hosts / 其它宿主
 
-Copy the folder `skills/screenshot-article-extractor/` into your host's skills directory. The host must have multimodal vision — run the porting checklist below before migrating.
+The skill is a plain `SKILL.md` folder — every host installs it by putting that folder into its own skills directory. No per-host config files are required:
+
+| Host | Install |
+|---|---|
+| Claude Code | `/plugin marketplace add JunTan414/screenshot-article-extractor` or copy to `.claude/skills/` (project) / `~/.claude/skills/` (global) |
+| Codex | copy to `.agents/skills/` (project) / `~/.agents/skills/` (global), or `codex plugin marketplace add` |
+| Cursor | copy to `.cursor/skills/` (project) / `~/.cursor/skills/` (global) |
+| Gemini CLI | `gemini skills install https://github.com/JunTan414/screenshot-article-extractor.git --path skills` |
+| GitHub Copilot | copy to `.github/skills/` (project) / `~/.copilot/skills/` (global) |
+| OpenCode | copy to `skills/` and reference it in the project `AGENTS.md` |
+| Windsurf | append the skill content to `.windsurfrules` |
+
+**Universal installer (recommended for users of many tools)** — [Vercel's skills CLI](https://github.com/vercel-labs/skills) auto-detects 70+ agent tools and places the skill in the right directory for you:
+
+```bash
+npx skills add JunTan414/screenshot-article-extractor
+```
+
+The host must have multimodal vision — run the porting checklist below before migrating.
 
 ## Usage / 使用示例
 
