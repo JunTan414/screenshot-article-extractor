@@ -1,0 +1,10 @@
+{
+  "name": "screenshot-article-extractor",
+  "version": "1.0.0",
+  "description": "Extract an article's full text from ordered screenshots into one structured Markdown file (readability-gated, tool-agnostic).",
+  "author": "JunTan414",
+  "license": "MIT",
+  "repository": "https://github.com/JunTan414/screenshot-article-extractor",
+  "keywords": ["screenshot", "article", "markdown", "multimodal", "extract"],
+  "skills": "./skills/"
+}
