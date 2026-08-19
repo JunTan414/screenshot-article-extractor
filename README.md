@@ -1,5 +1,9 @@
 # Screenshot Article Extractor · 截图文章提取器
 
+<p align="center">
+  <img src="assets/preview.png" alt="Screenshot Article Extractor preview" width="1280">
+</p>
+
 An agent skill that turns an ordered series of article screenshots into one faithful, structured Markdown document. Designed to be **tool-agnostic**: it works in any agent host with multimodal vision (WorkBuddy, Claude Code, Codex, Cursor, ...), with zero OCR dependencies.
 
 一个把「按顺序粘贴的多张文章截图」提取为「单篇结构化 Markdown」的 Agent Skill。流程与宿主无关，任何具备多模态读图能力的 Agent 环境都能运行，零 OCR 依赖。
