@@ -1,0 +1,22 @@
+{
+  "name": "screenshot-article-extractor",
+  "owner": {
+    "name": "JunTan414",
+    "email": "170404006+JunTan414@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Extract an article's full text from an ordered series of screenshots into one structured Markdown file, with a strict readability gate",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "screenshot-article-extractor",
+      "description": "Screenshot-to-Markdown article extraction: paste screenshots in order, get one faithful .md file",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/screenshot-article-extractor"
+      ]
+    }
+  ]
+}
